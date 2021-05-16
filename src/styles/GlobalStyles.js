@@ -5,7 +5,7 @@ export default createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: var(----primary);
+    color: var(--primary);
   }
   html, body, #root {
     max-height: 100vh;

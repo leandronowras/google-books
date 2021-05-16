@@ -1,4 +1,4 @@
-import {Container, BookThumbnail, Info, Title, Subtitle, Description, PublishedDate} from './styles'
+import {Container, BookThumbnail, Info, Title, Description, PublishedDate, Row, ViewMore, FavoriteIcon} from './styles'
 
 export function BookItem(props) {
     return (
@@ -18,6 +18,13 @@ export function BookItem(props) {
                     }
                 </Description>
                 <PublishedDate><span>Published at - </span>{props.book.volumeInfo.publishedDate}</PublishedDate>
+                <br/>
+
+                <Row>
+                    <ViewMore href={props.book.volumeInfo.infoLink}>View book</ViewMore>
+
+                    <FavoriteIcon />
+                </Row>
             </Info>
         </Container>
     )

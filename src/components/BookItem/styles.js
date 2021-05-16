@@ -17,9 +17,6 @@ export const Title = styled.h3`
 
 `
 
-export const Subtitle = styled.h4`
-
-`
 
 export const Description = styled.p`
     font-size: 14px;
@@ -27,5 +24,17 @@ export const Description = styled.p`
 `
 
 export const PublishedDate = styled.span`
-    
+
 `
+export const Row = styled.div`
+    display: flex;
+`
+
+export const ViewMore = styled.a`
+    display: inline;
+
+   font-size: 14px;
+   margin-top: 4px; 
+`
+
+export const FavoriteIcon = styled.button``
