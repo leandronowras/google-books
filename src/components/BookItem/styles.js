@@ -37,4 +37,6 @@ export const ViewMore = styled.a`
    margin-top: 4px; 
 `
 
-export const FavoriteIcon = styled.button``
+export const FavoriteButton = styled.button`
+
+`

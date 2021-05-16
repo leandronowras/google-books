@@ -21,6 +21,15 @@ export default createGlobalStyle`
   html {
     background: var(--white);
   }
+
+  button {
+    cursor: pointer;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
   :root {
     --primary: #000;
     --secondary: #15181C;
