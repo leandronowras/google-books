@@ -4,10 +4,6 @@ First add the node_modules folder by running the command
 
 ### `yarn`
 
-or
-
-### `npm install`
-
 after run the command
 
 ### `yarn start`
@@ -21,10 +17,9 @@ You will also see any lint errors in the console.
 
 
 
-       ------------------------------------------------------------------------------------------
 
 
-
+Default create react app commands bellow: 
 
 
 ### `yarn test`
