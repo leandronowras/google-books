@@ -10,6 +10,7 @@ export function BookItem(props) {
 
     function addToFavorites(newBook) {
             setValue([...value, newBook])
+            console.log(value)
         }
         
     return (
@@ -23,14 +24,16 @@ export function BookItem(props) {
             </BookThumbnail>
 
             <Info>
-                <Title><span>title - </span>{props.book.volumeInfo.title}</Title>
-                <Description><span>description - </span>
+                <Title><span>Title:  </span>{props.book.volumeInfo.title}</Title>
+                <Description><span>Description:  </span>
                     {   
                         props.book.searchInfo ?  
                         props.book.searchInfo.textSnippet.replace(/<\/?[^>]+(>|$)/g, "") : "Description not available"
                     }
                 </Description>
-                <PublishedDate><span>Published at - </span>{props.book.volumeInfo.publishedDate}</PublishedDate>
+                <PublishedDate>
+                    <span>Published at:  </span>{props.book.volumeInfo.publishedDate}
+                </PublishedDate>
                 <br/>
 
                 <Row>
@@ -46,7 +49,7 @@ export function BookItem(props) {
                             ]
                         }
                         // onClick={(e) => addToFavorites(e, "value")}
-                        onClick={(e) => addToFavorites([props.book.volumeInfo.title], "value")}
+                        onClick={(e) => addToFavorites(props.book.volumeInfo.title, "value")}
                     >
                         Add to favorites
                     </FavoriteButton>

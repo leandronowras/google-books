@@ -5,7 +5,7 @@ import { BookContext } from '../../contexts/BookContext'
 import { Nav } from './styles'
 
 import { RightNavbar } from '../RightNavbar'
-import { BookItem } from '../BookItem'
+import { BookListItem } from '../BookListItem'
 
 export function FavoriteNavbar () {
   const msg = useContext(BookContext)
@@ -15,11 +15,8 @@ export function FavoriteNavbar () {
         <div className="logo">
           Nav Bar
         </div>
-        <div>
-          {msg}
-        </div>
-        {/* <BookItem /> */}
-        <RightNavbar />
+
+        <BookListItem />
       </Nav>
     )
   }

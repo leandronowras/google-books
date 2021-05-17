@@ -2,14 +2,18 @@ import styled from 'styled-components'
 
 export const SearchBar = styled.div`
     height: 48px;
-    width: 700px;
+    width: 100%;
     position: relative;
     margin: 0 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
     input {
         background: #FFF;
         height: 48px;
-        width: 700px;
+        width: 92%;
         padding: 0 64px;
         border-radius: 100px;
         border: none;

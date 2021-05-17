@@ -8,6 +8,7 @@ export default createGlobalStyle`
     color: var(--primary);
   }
   html, body, #root {
+    font-family: "Roboto", sans-serif;
     max-height: 100vh;
     max-width: 100vw;
     width: 100%;
@@ -16,7 +17,8 @@ export default createGlobalStyle`
   *, button, input {
     border: 0;
     background: none;
-    font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Ubuntu, Arial, sans-serif;
+    /* font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Ubuntu, Arial, sans-serif; */
+    font-family: "Roboto", sans-serif;
   }
   html {
     background: var(--white);
@@ -34,7 +36,7 @@ export default createGlobalStyle`
     --primary: #000;
     --secondary: #15181C;
     --search: #202327;
-    --white: #D9D9D9;
+    --white: #EEEEEE;
     --gray: #7A7A7A;
     --outline: #2F3336;
     --retweet: #00C06B;

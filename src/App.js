@@ -1,11 +1,20 @@
-import {Home} from './pages/home'
+import { useState } from 'react'
+
+import { Layout } from './components/Layout'
+
 import GlobalStyles from './styles/GlobalStyles'
 
+import {BookContext} from './contexts/BookContext'
+
 function App() {
+  const [value, setValue] = useState([])
+
   return (
     <>
-      <Home />
-      <GlobalStyles />
+        <BookContext.Provider value={[value, setValue]}>
+          <Layout />
+          <GlobalStyles />
+        </BookContext.Provider>
     </>
   );
 }
