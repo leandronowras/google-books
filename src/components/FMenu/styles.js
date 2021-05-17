@@ -8,7 +8,7 @@ export const Container = styled.div`
 
     max-width: 300px;
 
-    @media (max-width: 500px) {
+    @media (max-width: 668px) {
     display: none;
   }
 `
@@ -22,5 +22,6 @@ export const Body = styled.div`
     li {
         padding: 1rem;
         margin-bottom: 1rem;
+        list-style-type: none;
     }
 `

@@ -1,43 +1,22 @@
 import{useState, useEffect} from 'react'
 import axios from 'axios'
 
-import { Container, Wrapper, Content } from './styles'
+import { Container, Wrapper, Content, QueryParams, MaxResults, Index } from './styles'
 
-import FavoriteMenu from '../FavoriteMenu' 
-import { FavoriteNavbar } from '../FavoriteNavbar'
 import { BookItem } from '../BookItem'
 import { SearchBar } from '../SearchBar'
-
-import { BookContext } from '../../contexts/BookContext'
-
 import searchIcon from '../../svg/search.svg'
 
-// Dropdown
-// const items = [
-//     {
-//       id: 1,
-//       value: 'Pulp Fiction',
-//     },
-//     {
-//       id: 2,
-//       value: 'The Prestige',
-//     },
-//     {
-//       id: 3,
-//       value: 'Blade Runner 2049',
-//     },
-//   ];
-
-
 export function Main() {
+    const [maxResults, setMaxResults] = useState(10);
+    const [startIndex, setStartIndex] = useState(1);
     const [booksResult, setBooksResult] = useState([])
     const [query, setQuery] = useState('')
-    // const [value, setValue] = useState(["dentro do array do value"])
 
     const handleKeyDown = (event) => {
         if (event.key === 'Enter') {
           axios.get(
-              `https://www.googleapis.com/books/v1/volumes?q=${query}&key=AIzaSyAOHS8GCE_3nLfRN3bgaILhlyB0j3YxB9k`
+              `https://www.googleapis.com/books/v1/volumes?q=${query}&maxResults=${maxResults}&startIndex=${startIndex}&key=AIzaSyAOHS8GCE_3nLfRN3bgaILhlyB0j3YxB9k`
           )
           .then(res => setBooksResult(res.data.items))
         }
@@ -48,10 +27,7 @@ export function Main() {
     return (
         <Container>
             <Wrapper>
-                {/* <BookContext.Provider value={[value, setValue]}> */}
-                    {/* <FavoriteNavbar /> */}
-
-                    <SearchBar>
+                     <SearchBar>
                         <img src={searchIcon} alt="search icon" />
                         <input 
                             placeholder="Search for books" 
@@ -62,13 +38,36 @@ export function Main() {
                         />
                     </SearchBar>
 
+                    <QueryParams>
+                        <MaxResults>
+                            <label for='maxResults'></label>
+                            <input
+                                type='number'
+                                id='maxResults'
+                                placeholder='           Max Results'
+                                value={maxResults}
+                                onChange={e => setMaxResults(e.target.value)}
+                            />
+                        </MaxResults>
+
+                        <Index>
+                            <label for='startIndex'></label>
+                            <input
+                                type='number'
+                                id='startIndex'
+                                placeholder='            Start Index'
+                                value={startIndex}
+                                onChange={e => setStartIndex(e.target.value)}
+                            />
+                        </Index>
+                    </QueryParams>
+
                     <Content>
                         {/* Display list of books found */}
                         {booksResult.map(book => {
                             return <BookItem key={book.id} book={book} />
                         })}
                     </Content>
-                {/* </BookContext.Provider> */}
             </Wrapper>
         </Container>
     )

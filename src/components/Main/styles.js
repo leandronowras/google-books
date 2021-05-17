@@ -19,3 +19,27 @@ export const Content = styled.div`
   flex-direction: column;
   justify-content: center;
 `
+
+export const QueryParams = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+`
+
+// É div?????
+export const MaxResults = styled.div`
+  input {
+    border: 2px solid rgba(255, 255, 255);
+    border-radius: 40px;
+    padding: 10px 5px;
+  }
+`
+
+export const Index = styled.div`
+margin-left: 10rem;
+input {
+    border: 2px solid rgba(255, 255, 255);
+    border-radius: 40px;
+    padding: 10px 5px;
+  }
+`
