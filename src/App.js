@@ -16,7 +16,7 @@ function App() {
           <GlobalStyles />
         </BookContext.Provider>
     </>
-  );
+  ); 
 }
 
 export default App;

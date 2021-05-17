@@ -2,7 +2,6 @@ import {useContext} from 'react'
 
 import { BookContext } from '../../contexts/BookContext'
 
-import {useState, useEffect} from 'react'
 import {Container, BookThumbnail, Info, Title, Description, PublishedDate, Row, ViewMore, FavoriteButton} from './styles'
 
 export function BookItem(props) {
@@ -10,7 +9,6 @@ export function BookItem(props) {
 
     function addToFavorites(newBook) {
             setValue([...value, newBook])
-            console.log(value)
         }
         
     return (

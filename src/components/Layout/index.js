@@ -1,7 +1,7 @@
 import {Container, Wrapper} from './styles'
 
 import {Main} from '../Main'
-import {FMenu} from '../FMenu'
+import {FavoriteMenu} from '../FavoriteMenu'
 
 export function Layout() {
     return (
@@ -9,7 +9,7 @@ export function Layout() {
           <Wrapper>
 
             <Main />
-            <FMenu />
+            <FavoriteMenu />
             
           </Wrapper>
         </Container>

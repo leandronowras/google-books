@@ -1,4 +1,4 @@
-import{useState, useEffect} from 'react'
+import{ useState } from 'react'
 import axios from 'axios'
 
 import { Container, Wrapper, Content, QueryParams, MaxResults, Index } from './styles'
@@ -22,8 +22,6 @@ export function Main() {
         }
       }
 
-    console.log(booksResult)
-    console.log(query)
     return (
         <Container>
             <Wrapper>
@@ -40,6 +38,7 @@ export function Main() {
 
                     <QueryParams>
                         <MaxResults>
+                            <span>Max results: </span>
                             <label for='maxResults'></label>
                             <input
                                 type='number'
@@ -47,10 +46,12 @@ export function Main() {
                                 placeholder='           Max Results'
                                 value={maxResults}
                                 onChange={e => setMaxResults(e.target.value)}
+                                onKeyDown={handleKeyDown}
                             />
                         </MaxResults>
 
                         <Index>
+                            <span>Start from index: </span>
                             <label for='startIndex'></label>
                             <input
                                 type='number'
@@ -58,6 +59,7 @@ export function Main() {
                                 placeholder='            Start Index'
                                 value={startIndex}
                                 onChange={e => setStartIndex(e.target.value)}
+                                onKeyDown={handleKeyDown}
                             />
                         </Index>
                     </QueryParams>
