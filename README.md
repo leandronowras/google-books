@@ -18,12 +18,12 @@ You will also see any lint errors in the console.
 .\
 .\
 .\
-.\
+.
 
 Default create react app commands bellow: 
 .\
 .\
-.\
+.
 
 ### `yarn test`
 
